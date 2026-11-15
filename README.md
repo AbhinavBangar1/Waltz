@@ -24,7 +24,7 @@ However, raw scientific NISAR data is locked inside massive **2 to 8 GB HDF5 fil
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 Waltz decouples heavy scientific data processing from client-side exploration using a precomputed static pack architecture:
 
@@ -49,7 +49,7 @@ graph TD
 
 ---
 
-## 🏆 Evaluation Samples for Judges
+## Evaluation Samples for Judges
 
 For the NASA Space Apps Challenge evaluation, three reference packs are precomputed and directly viewable to demonstrate the three core scientific capabilities of Level 2 NISAR microwave radar:
 
@@ -59,7 +59,7 @@ For the NASA Space Apps Challenge evaluation, three reference packs are precompu
 | **Pack B: Pantanal Flood** | GCOV (Covariance) | Wetland Inundation Dynamics | **Data Honesty**: Isolates July 27 – Aug 10 instrument data gap; double-bounce vegetation scattering | `/#pack=floodplain-wet-season` |
 | **Pack C: Bengal Delta Crops** | GCOV Time-Series | Monsoon Paddy Rice Phenology | **Click-to-Chart**: Sub-5ms query of 100m binary data cube across 9 passes without a live database | `/#pack=crop-cycle-radar` |
 
-> **Live Processing Engine:** In addition to these three reference packs, judges can click the **`⚡ Live Pipeline`** button in the web navigation bar to execute live pipeline processing for arbitrary coordinates on Earth (e.g., San Andreas Fault, Tohoku Megathrust, or custom Lat/Lon).
+> **Live Processing Engine:** In addition to these three reference packs, judges can click the **Live Pipeline** button in the web navigation bar to execute live pipeline processing for arbitrary coordinates on Earth (e.g., San Andreas Fault, Tohoku Megathrust, or custom Lat/Lon).
 
 ---
 
@@ -97,7 +97,7 @@ Monitoring smallholder crops across dynamic seasons requires high temporal fidel
 
 ---
 
-## 💡 Project Deep Dive & NASA Judging Details
+## Project Deep Dive & NASA Judging Details
 
 ### 1. What does it do and how does it work?
 Waltz transforms heavy, multi-gigabyte Level 2 NASA-ISRO NISAR radar products into lightweight, fast, and interactive stories on real OpenStreetMap basemaps. It operates through an automated Python pipeline CLI (`waltz-pipeline`) and a modern zero-server React client. The pipeline extracts L-band microwave radar phase and backscatter from ASF DAAC HDF5 files, converts phase to line-of-sight displacement ($d_{\text{LOS}} = -\frac{\lambda}{4\pi}\phi$), generates 11.92 cm optical fringes, despeckles backscatter using 3x3 median filters, and quantizes multi-temporal backscatter stacks into 8-bit binary data cubes (`cube.bin`). The web client provides dynamic fault transect profiling (Line A to B), wetland flood tracking with specular vs. double-bounce classification, and sub-5ms click-to-chart crop phenology curves.
@@ -219,7 +219,7 @@ Waltz/
     │   │   ├── InundationView.tsx  # Pack B view with instrument gap timeline
     │   │   ├── TimeSeriesView.tsx  # Pack C view with sub-5ms click-to-chart
     │   │   ├── MethodsModal.tsx    # "Where every pixel comes from" modal
-    │   │   └── SystemStatesModal.tsx # Error boundary, offline, & fallback states
+    │   │   └── LivePipelineModal.tsx # Live pipeline execution modal
     │   ├── types/                # TypeScript interface definitions
     │   └── App.tsx               # Client router & state synchronization
 ```

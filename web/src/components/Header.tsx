@@ -7,7 +7,6 @@ interface HeaderProps {
   currentPack: PackManifest | null;
   onNavigateHome: () => void;
   onOpenMethods: () => void;
-  onOpenSystemStates?: () => void;
   onOpenLivePipeline?: () => void;
   onSelectPack?: (packId: string) => void;
   viewMode?: 'editorial' | 'map';
@@ -18,7 +17,6 @@ export const Header: React.FC<HeaderProps> = ({
   currentPack,
   onNavigateHome,
   onOpenMethods,
-  onOpenSystemStates,
   onOpenLivePipeline,
   onSelectPack,
   viewMode,
@@ -80,16 +78,8 @@ export const Header: React.FC<HeaderProps> = ({
             >
               Methods
             </button>
-            {onOpenSystemStates && (
-              <button
-                onClick={onOpenSystemStates}
-                className="hover:text-waltz-ink dark:hover:text-stone-100 text-stone-400"
-              >
-                System States
-              </button>
-            )}
             <a
-              href="https://github.com"
+              href="https://github.com/AbhinavBangar1/Waltz"
               target="_blank"
               rel="noreferrer"
               className="hover:text-waltz-ink dark:hover:text-stone-100"

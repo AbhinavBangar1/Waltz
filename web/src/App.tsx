@@ -6,14 +6,12 @@ import { DeformationView } from './components/DeformationView';
 import { InundationView } from './components/InundationView';
 import { TimeSeriesView } from './components/TimeSeriesView';
 import { MethodsModal } from './components/MethodsModal';
-import { SystemStatesModal } from './components/SystemStatesModal';
 import { LivePipelineModal } from './components/LivePipelineModal';
 
 export const App: React.FC = () => {
   const [packs, setPacks] = useState<PackManifest[]>([]);
   const [activePackId, setActivePackId] = useState<string | null>(null);
   const [isMethodsOpen, setIsMethodsOpen] = useState<boolean>(false);
-  const [isSystemStatesOpen, setIsSystemStatesOpen] = useState<boolean>(false);
   const [isLivePipelineOpen, setIsLivePipelineOpen] = useState<boolean>(false);
   const [landingMode, setLandingMode] = useState<'editorial' | 'map'>('editorial');
   const [loading, setLoading] = useState<boolean>(true);
@@ -74,7 +72,6 @@ export const App: React.FC = () => {
         currentPack={currentPack}
         onNavigateHome={handleNavigateHome}
         onOpenMethods={() => setIsMethodsOpen(true)}
-        onOpenSystemStates={() => setIsSystemStatesOpen(true)}
         onOpenLivePipeline={() => setIsLivePipelineOpen(true)}
         onSelectPack={handleSelectPack}
         viewMode={landingMode}
@@ -132,12 +129,6 @@ export const App: React.FC = () => {
         isOpen={isMethodsOpen}
         onClose={() => setIsMethodsOpen(false)}
         pack={currentPack}
-      />
-
-      {/* System States Modal */}
-      <SystemStatesModal
-        isOpen={isSystemStatesOpen}
-        onClose={() => setIsSystemStatesOpen(false)}
       />
 
       {/* Live NISAR Pipeline Modal */}
