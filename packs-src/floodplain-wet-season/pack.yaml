@@ -1,0 +1,58 @@
+id: floodplain-wet-season
+title: A floodplain through the wet season
+type: inundation
+hook: Dark open water, bright flooded forest. Watch the flood spread and retreat across passes.
+event_date: 2026-08-15
+aoi_bbox: [-56.5, -17.5, -55.0, -16.0]
+thresholds:
+  open_water_hv_max_db: -18.0
+  change_threshold_db: -3.0
+  flooded_veg_hh_min_db: 3.0
+granules:
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260618T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-06-18
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260630T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-06-30
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260712T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-07-12
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260724T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-07-24
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260817T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-08-17
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260829T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-08-29
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260910T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-09-10
+  - product: GCOV
+    id: NISAR_L2_PR_GCOV_002_010_D_122_20260922T221500_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-09-22
+story:
+  what_changed: Seasonal inundation expanded over 420 km² during peak wet discharge. Open water extent grew by 64% while flooded marsh and canopied swamp vegetation expanded by 115%.
+  drivers: Heavy seasonal monsoon rainfall leading to river overbanking across low-gradient alluvial plains.
+  caveats: Instrument data gap between 2026-07-27 and 2026-08-10 means the initial rising limb of the flood was not recorded. Candidate classifications use calibrated thresholding, not ground truth.
+  radar_explainer: Smooth open water specularly reflects the satellite microwave pulse away, appearing pitch black (< -18 dB). In contrast, water standing beneath tree trunks creates a double-bounce corner reflector effect, producing abnormally high HH backscatter (> -5 dB).
+references:
+  - https://nisar-docs.asf.alaska.edu/

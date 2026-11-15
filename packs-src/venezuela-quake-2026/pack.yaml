@@ -1,0 +1,23 @@
+id: venezuela-quake-2026
+title: Ground shift after the June 2026 Venezuela earthquakes
+type: deformation
+hook: Rainbow fringes show how far the surface moved toward or away from the satellite between two passes.
+event_date: 2026-06-24
+aoi_bbox: [-70.5, 9.5, -69.2, 10.8]
+stable_reference_window: [-70.3, 9.6, -70.1, 9.8]
+thresholds:
+  coherence_min: 0.3
+granules:
+  - product: GUNW
+    id: NISAR_L2_PR_GUNW_001_004_A_084_20260612T104522_20260624T104522_P05023
+    maturity: PROVISIONAL
+    crid: P05023
+    acquisition_date: 2026-06-24
+story:
+  what_changed: Coseismic interferometry reveals up to 18.2 cm of line-of-sight surface displacement across the active fault line. The eastern block shifted primarily toward the satellite sensor while the western fault block experienced subsidence and westward motion.
+  drivers: Shallow strike-slip fault rupture associated with the Boconó Fault zone within the northern Andean deformation belt.
+  caveats: Motion is measured along the satellite line of sight (~37° incidence angle), not pure vertical or horizontal slip. Tropospheric water vapor delay can induce local ~1-2 cm phase artifacts. Areas with coherence below 0.3 are masked in grey.
+  radar_explainer: Each repeating color fringe represents exactly one half-wavelength cycle of ground displacement (11.9 cm for NISAR's 23.8 cm L-band carrier). Tightly packed concentric fringes indicate steep strain gradients.
+references:
+  - https://nisar-docs.asf.alaska.edu/
+  - https://search.asf.alaska.edu/

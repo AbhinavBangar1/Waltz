@@ -1,0 +1,129 @@
+{
+  "id": "crop-cycle-radar",
+  "title": "A crop cycle, seen by radar",
+  "type": "timeseries",
+  "hook": "Click a field and watch its radar signal rise and fall with the growing season.",
+  "event_date": "2026-09-05",
+  "aoi_bbox": [
+    88.1,
+    22.4,
+    89.2,
+    23.3
+  ],
+  "layers": [
+    {
+      "id": "backscatter",
+      "label": "HV backscatter (dB)",
+      "file": "backscatter_P5.png",
+      "type": "raster",
+      "bounds": [
+        88.1,
+        22.4,
+        89.2,
+        23.3
+      ],
+      "colormap": "Radar Grayscale (Power dB)",
+      "legend_min": -30.0,
+      "legend_max": 0.0,
+      "units": "dB, radar backscatter",
+      "dates": [
+        "2026-06-05",
+        "2026-06-17",
+        "2026-06-29",
+        "2026-07-11",
+        "2026-07-23",
+        "2026-08-16",
+        "2026-08-28",
+        "2026-09-09",
+        "2026-10-25"
+      ]
+    }
+  ],
+  "granules": [
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260605T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-06-05"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260617T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-06-17"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260629T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-06-29"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260711T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-07-11"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260723T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-07-23"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260816T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-08-16"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260828T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-08-28"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_PR_GCOV_004_012_A_045_20260909T173000_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-09-09"
+    },
+    {
+      "product": "GCOV",
+      "id": "NISAR_L2_VA_GCOV_004_012_A_045_20261025T173000_P05036",
+      "maturity": "VALIDATED",
+      "crid": "P05036",
+      "acquisition_date": "2026-10-25"
+    }
+  ],
+  "story": {
+    "what_changed": "Cross-polarized (HV) radar backscatter rises progressively from -24.1 dB (flooded seedling stage) to -12.3 dB (peak vegetative canopy volume), before collapsing back down to -21.8 dB post-harvest.",
+    "drivers": "Monsoon paddy rice phenological development stages (land preparation, seedling flooding, vegetative elongation, heading, ripening, and field harvesting).",
+    "caveats": "This view mixes processing versions (P05023 Provisional and P05036 Validated). Differences between late October dates and earlier summer passes may partly reflect processor algorithm upgrades rather than ground change alone.",
+    "radar_explainer": "Cross-polarization (HV) response is primarily driven by volume scattering inside the complex canopy geometry. As plant height and leaf area index increase, more microwave energy is depolarized back to the satellite antenna."
+  },
+  "references": [
+    "https://nisar-docs.asf.alaska.edu/"
+  ],
+  "parameters": {
+    "polarization": "HV (volume, vegetation) & HH",
+    "db_quantization_range": "-30 to 0 dB in uint8",
+    "grid_resolution": "100x100 (~100m spacing)",
+    "warning": "This view mixes processing versions (P05023 and P05036). Differences between dates may partly reflect software changes, not the ground."
+  },
+  "downloads": {
+    "cube": "cube.bin",
+    "manifest": "manifest.json"
+  },
+  "citation": "Contains modified NASA-ISRO NISAR Level 2 GCOV data (2026) distributed by ASF DAAC.",
+  "build_timestamp": "2026-11-15T08:33:10.729659Z",
+  "pipeline_version": "0.1.0"
+}

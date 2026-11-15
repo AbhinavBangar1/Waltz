@@ -1,0 +1,107 @@
+{
+  "id": "venezuela-quake-2026",
+  "title": "Ground shift after the June 2026 Venezuela earthquakes",
+  "type": "deformation",
+  "hook": "Rainbow fringes show how far the surface moved toward or away from the satellite between two passes.",
+  "event_date": "2026-06-24",
+  "aoi_bbox": [
+    -70.5,
+    9.5,
+    -69.2,
+    10.8
+  ],
+  "layers": [
+    {
+      "id": "displacement",
+      "label": "Displacement",
+      "file": "displacement.png",
+      "type": "raster",
+      "bounds": [
+        -70.5,
+        9.5,
+        -69.2,
+        10.8
+      ],
+      "colormap": "Diverging (Red-Cream-Cyan)",
+      "legend_min": -20.0,
+      "legend_max": 20.0,
+      "units": "cm, line of sight",
+      "dates": [
+        "2026-06-12",
+        "2026-06-24"
+      ]
+    },
+    {
+      "id": "fringes",
+      "label": "Fringes",
+      "file": "fringes.png",
+      "type": "raster",
+      "bounds": [
+        -70.5,
+        9.5,
+        -69.2,
+        10.8
+      ],
+      "colormap": "Cyclical Rainbow (11.9 cm/cycle)",
+      "legend_min": 0.0,
+      "legend_max": 11.9,
+      "units": "cm/fringe",
+      "dates": [
+        "2026-06-12",
+        "2026-06-24"
+      ]
+    },
+    {
+      "id": "coherence",
+      "label": "Coherence mask",
+      "file": "coherence.png",
+      "type": "raster",
+      "bounds": [
+        -70.5,
+        9.5,
+        -69.2,
+        10.8
+      ],
+      "colormap": "Grayscale",
+      "legend_min": 0.0,
+      "legend_max": 1.0,
+      "units": "correlation",
+      "dates": [
+        "2026-06-24"
+      ]
+    }
+  ],
+  "granules": [
+    {
+      "product": "GUNW",
+      "id": "NISAR_L2_PR_GUNW_001_004_A_084_20260612T104522_20260624T104522_P05023",
+      "maturity": "PROVISIONAL",
+      "crid": "P05023",
+      "acquisition_date": "2026-06-24"
+    }
+  ],
+  "story": {
+    "what_changed": "Coseismic interferometry reveals up to 18.2 cm of line-of-sight surface displacement across the active fault line. The eastern block shifted primarily toward the satellite sensor while the western fault block experienced subsidence and westward motion.",
+    "drivers": "Shallow strike-slip fault rupture associated with the Boconó Fault zone within the northern Andean deformation belt.",
+    "caveats": "Motion is measured along the satellite line of sight (~37° incidence angle), not pure vertical or horizontal slip. Tropospheric water vapor delay can induce local ~1-2 cm phase artifacts. Areas with coherence below 0.3 are masked in grey.",
+    "radar_explainer": "Each repeating color fringe represents exactly one half-wavelength cycle of ground displacement (11.9 cm for NISAR's 23.8 cm L-band carrier). Tightly packed concentric fringes indicate steep strain gradients."
+  },
+  "references": [
+    "https://nisar-docs.asf.alaska.edu/",
+    "https://search.asf.alaska.edu/"
+  ],
+  "parameters": {
+    "coherence_mask": ">= 0.3",
+    "reference_area": "Stable window [-70.3, 9.6, -70.1, 9.8]",
+    "carrier_frequency": "1.25 GHz (L-band)",
+    "radar_wavelength": "0.2384 m",
+    "fringe_cycle_displacement": "11.92 cm"
+  },
+  "downloads": {
+    "geotiff": "displacement_gunw.tif",
+    "manifest": "manifest.json"
+  },
+  "citation": "Contains modified NASA-ISRO NISAR Level 2 GUNW data (2026) distributed by ASF DAAC.",
+  "build_timestamp": "2026-11-15T08:33:10.576655Z",
+  "pipeline_version": "0.1.0"
+}

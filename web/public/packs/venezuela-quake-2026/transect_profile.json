@@ -1,0 +1,202 @@
+[
+  {
+    "distance_km": 0.0,
+    "disp_cm": -1.06
+  },
+  {
+    "distance_km": 1.02,
+    "disp_cm": -1.26
+  },
+  {
+    "distance_km": 2.04,
+    "disp_cm": -1.49
+  },
+  {
+    "distance_km": 3.06,
+    "disp_cm": -1.76
+  },
+  {
+    "distance_km": 4.08,
+    "disp_cm": -2.06
+  },
+  {
+    "distance_km": 5.1,
+    "disp_cm": -2.41
+  },
+  {
+    "distance_km": 6.12,
+    "disp_cm": -2.81
+  },
+  {
+    "distance_km": 7.14,
+    "disp_cm": -3.26
+  },
+  {
+    "distance_km": 8.16,
+    "disp_cm": -3.76
+  },
+  {
+    "distance_km": 9.18,
+    "disp_cm": -4.32
+  },
+  {
+    "distance_km": 10.2,
+    "disp_cm": -4.94
+  },
+  {
+    "distance_km": 11.22,
+    "disp_cm": -5.61
+  },
+  {
+    "distance_km": 12.24,
+    "disp_cm": -6.34
+  },
+  {
+    "distance_km": 13.27,
+    "disp_cm": -7.12
+  },
+  {
+    "distance_km": 14.29,
+    "disp_cm": -7.92
+  },
+  {
+    "distance_km": 15.31,
+    "disp_cm": -8.72
+  },
+  {
+    "distance_km": 16.33,
+    "disp_cm": -9.49
+  },
+  {
+    "distance_km": 17.35,
+    "disp_cm": -10.15
+  },
+  {
+    "distance_km": 18.37,
+    "disp_cm": -10.62
+  },
+  {
+    "distance_km": 19.39,
+    "disp_cm": -10.77
+  },
+  {
+    "distance_km": 20.41,
+    "disp_cm": -10.45
+  },
+  {
+    "distance_km": 21.43,
+    "disp_cm": -9.48
+  },
+  {
+    "distance_km": 22.45,
+    "disp_cm": -7.72
+  },
+  {
+    "distance_km": 23.47,
+    "disp_cm": -5.12
+  },
+  {
+    "distance_km": 24.49,
+    "disp_cm": -1.82
+  },
+  {
+    "distance_km": 25.51,
+    "disp_cm": 1.82
+  },
+  {
+    "distance_km": 26.53,
+    "disp_cm": 5.12
+  },
+  {
+    "distance_km": 27.55,
+    "disp_cm": 7.72
+  },
+  {
+    "distance_km": 28.57,
+    "disp_cm": 9.48
+  },
+  {
+    "distance_km": 29.59,
+    "disp_cm": 10.45
+  },
+  {
+    "distance_km": 30.61,
+    "disp_cm": 10.77
+  },
+  {
+    "distance_km": 31.63,
+    "disp_cm": 10.62
+  },
+  {
+    "distance_km": 32.65,
+    "disp_cm": 10.15
+  },
+  {
+    "distance_km": 33.67,
+    "disp_cm": 9.49
+  },
+  {
+    "distance_km": 34.69,
+    "disp_cm": 8.72
+  },
+  {
+    "distance_km": 35.71,
+    "disp_cm": 7.92
+  },
+  {
+    "distance_km": 36.73,
+    "disp_cm": 7.12
+  },
+  {
+    "distance_km": 37.76,
+    "disp_cm": 6.34
+  },
+  {
+    "distance_km": 38.78,
+    "disp_cm": 5.61
+  },
+  {
+    "distance_km": 39.8,
+    "disp_cm": 4.94
+  },
+  {
+    "distance_km": 40.82,
+    "disp_cm": 4.32
+  },
+  {
+    "distance_km": 41.84,
+    "disp_cm": 3.76
+  },
+  {
+    "distance_km": 42.86,
+    "disp_cm": 3.26
+  },
+  {
+    "distance_km": 43.88,
+    "disp_cm": 2.81
+  },
+  {
+    "distance_km": 44.9,
+    "disp_cm": 2.41
+  },
+  {
+    "distance_km": 45.92,
+    "disp_cm": 2.06
+  },
+  {
+    "distance_km": 46.94,
+    "disp_cm": 1.76
+  },
+  {
+    "distance_km": 47.96,
+    "disp_cm": 1.49
+  },
+  {
+    "distance_km": 48.98,
+    "disp_cm": 1.26
+  },
+  {
+    "distance_km": 50.0,
+    "disp_cm": 1.06
+  }
+]
