@@ -97,6 +97,41 @@ Monitoring smallholder crops across dynamic seasons requires high temporal fidel
 
 ---
 
+## 💡 Project Deep Dive & NASA Judging Details
+
+### 1. What does it do and how does it work?
+Waltz transforms heavy, multi-gigabyte Level 2 NASA-ISRO NISAR radar products into lightweight, fast, and interactive stories on real OpenStreetMap basemaps. It operates through an automated Python pipeline CLI (`waltz-pipeline`) and a modern zero-server React client. The pipeline extracts L-band microwave radar phase and backscatter from ASF DAAC HDF5 files, converts phase to line-of-sight displacement ($d_{\text{LOS}} = -\frac{\lambda}{4\pi}\phi$), generates 11.92 cm optical fringes, despeckles backscatter using 3x3 median filters, and quantizes multi-temporal backscatter stacks into 8-bit binary data cubes (`cube.bin`). The web client provides dynamic fault transect profiling (Line A to B), wetland flood tracking with specular vs. double-bounce classification, and sub-5ms click-to-chart crop phenology curves.
+
+### 2. What benefits does it have?
+- **Eliminates High Barriers of Entry:** Users can explore centimeter-scale planetary dynamics without downloading 8 GB HDF5 files or learning specialized GIS software (like SNAP or QGIS).
+- **Zero Server Cost & Sub-Second Latency:** By precomputing Web Mercator tiles and client-side binary cubes, Waltz runs 100% serverless on free static hosts (Vercel, GitHub Pages) with instant page loads.
+- **Transparent Scientific Provenance:** Every pixel is mapped back to its named ASF DAAC granule ID, processing CRID, and physical thresholds in a dedicated provenance modal.
+- **Global Extensibility:** The `waltz live` CLI and interactive frontend processor allow users to run the pipeline on any geographic coordinates on Earth.
+
+### 3. What is the intended impact of the project?
+- **Rapid Disaster Response:** Civic authorities and local first responders can assess co-seismic fault slip and flood boundary extent within hours of satellite downlink.
+- **STEM & Public Education:** Translates abstract electromagnetic physics and microwave wave mechanics into tactile, interactive classroom visualizations for students worldwide.
+- **Equitable Climate Adaptation:** Equips smallholder farming cooperatives and regional planners with all-weather radar tracking to monitor seasonal crop growth and flood risks.
+
+### 4. What tools, coding languages, hardware, or software were used?
+- **Languages:** TypeScript, Python 3.11+, HTML5, CSS3.
+- **Frontend Client:** React 18, Vite 6, Tailwind CSS, Leaflet, OpenStreetMap, Lucide Icons.
+- **Data Engineering & Science Pipeline:** Typer, Pydantic v2, NumPy, Rasterio / GDAL, SciPy (spatial median filtering), PyYAML, Pytest.
+- **Development & Packaging:** `uv` package manager, npm, Git, GitHub, Vercel.
+
+### 5. How is your project creative?
+- **Interactive Line A-to-B Fault Transect:** Instead of static colored maps, users draw any arbitrary cross-section across an active rupture to dynamically slice and plot ground motion and interferometric signal coherence.
+- **Click-to-Chart Binary Data Cubes:** Compresses multi-temporal radar stacks into lightweight 8-bit binary files that load directly into browser RAM, enabling instant (sub-5ms) parcel time-series queries without an active database.
+- **Radar Physics Lens:** Integrates interactive explanations of microwave wavelength ($\lambda = 23.84\text{ cm}$) and canopy penetration directly alongside the map.
+- **Dual Editorial & Map Layouts:** Bridges long-form scientific journalism with analytical GIS tools.
+
+### 6. What factors did our team consider?
+- **Scientific Honesty over Artificial Smoothing:** When encountering the permanent NISAR instrument gap (July 27 – August 10, 2026), Waltz refused to synthetically interpolate or guess data. Instead, it explicitly highlights the gap with a hatched column, maintaining data truth.
+- **Bandwidth & Accessibility Constraints:** Avoided heavy WebGL/GPU requirements and large tile servers so the app performs flawlessly on low-power mobile devices and rural broadband connections.
+- **Open-Source & Privacy:** Strictly zero tracking, zero telemetry, zero proprietary map API keys, and 100% open-source under the MIT license.
+
+---
+
 ## Global Pipeline vs. Demonstration Packs
 
 ### Is this a toy or does the pipeline work globally?
