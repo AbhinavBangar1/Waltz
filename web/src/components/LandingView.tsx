@@ -82,7 +82,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 : 'border-paper-border dark:border-paper-darkBorder text-stone-600 dark:text-stone-300 hover:bg-paper-200'
             }`}
           >
-            Editorial Story (Screen 9)
+            Editorial Story
           </button>
           <button
             onClick={() => setViewMode('map')}
@@ -92,7 +92,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
                 : 'border-paper-border dark:border-paper-darkBorder text-stone-600 dark:text-stone-300 hover:bg-paper-200'
             }`}
           >
-            Interactive Map & Search (Screen 1)
+            Interactive Map & Search
           </button>
         </div>
         <span className="hidden sm:inline text-stone-500">NISAR L2 Open Data</span>

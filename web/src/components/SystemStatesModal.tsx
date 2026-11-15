@@ -17,7 +17,7 @@ export const SystemStatesModal: React.FC<SystemStatesModalProps> = ({ isOpen, on
         <div className="flex items-start justify-between border-b border-paper-border dark:border-paper-darkBorder pb-4">
           <div>
             <div className="text-[11px] font-mono tracking-widest text-stone-500 uppercase">
-              WALTZ · SYSTEM STATES (SCREEN 6)
+              WALTZ · SYSTEM STATES & RESILIENCE
             </div>
             <h2 className="font-serif text-3xl text-waltz-ink dark:text-stone-100 font-medium mt-1">
               When something is loading, missing or broken

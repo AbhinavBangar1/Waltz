@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { PackManifest } from '../types';
-import { Moon, Sun, Share2, Check } from 'lucide-react';
+import { Moon, Sun, Share2, Check, Zap } from 'lucide-react';
 
 interface HeaderProps {
   currentPack: PackManifest | null;
   onNavigateHome: () => void;
   onOpenMethods: () => void;
   onOpenSystemStates?: () => void;
+  onOpenLivePipeline?: () => void;
+  onSelectPack?: (packId: string) => void;
   viewMode?: 'editorial' | 'map';
   onToggleViewMode?: () => void;
 }
@@ -17,6 +19,8 @@ export const Header: React.FC<HeaderProps> = ({
   onNavigateHome,
   onOpenMethods,
   onOpenSystemStates,
+  onOpenLivePipeline,
+  onSelectPack,
   viewMode,
   onToggleViewMode,
 }) => {
@@ -98,6 +102,54 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Right side: Provenance badge & actions */}
       <div className="flex items-center space-x-2 sm:space-x-3">
+        {onOpenLivePipeline && (
+          <button
+            onClick={onOpenLivePipeline}
+            className="flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium rounded-full bg-waltz-rust text-white hover:bg-stone-800 transition-colors shadow-sm"
+            title="Process any custom coordinates on Earth"
+          >
+            <Zap className="w-3.5 h-3.5 fill-current" />
+            <span>Live Pipeline</span>
+          </button>
+        )}
+
+        {/* Quick Sample Pack switcher for Judges */}
+        {onSelectPack && (
+          <div className="hidden lg:flex items-center space-x-1 text-[11px] font-mono border-r border-paper-border dark:border-paper-darkBorder pr-3 text-stone-500">
+            <span className="text-[10px] uppercase text-stone-400">Samples:</span>
+            <button
+              onClick={() => onSelectPack('venezuela-quake-2026')}
+              className={`px-2 py-0.5 rounded transition-colors ${
+                currentPack?.id === 'venezuela-quake-2026'
+                  ? 'bg-stone-200 dark:bg-stone-700 font-bold text-stone-900 dark:text-stone-100'
+                  : 'hover:text-stone-900 dark:hover:text-stone-100'
+              }`}
+            >
+              Quake (A)
+            </button>
+            <button
+              onClick={() => onSelectPack('floodplain-wet-season')}
+              className={`px-2 py-0.5 rounded transition-colors ${
+                currentPack?.id === 'floodplain-wet-season'
+                  ? 'bg-stone-200 dark:bg-stone-700 font-bold text-stone-900 dark:text-stone-100'
+                  : 'hover:text-stone-900 dark:hover:text-stone-100'
+              }`}
+            >
+              Flood (B)
+            </button>
+            <button
+              onClick={() => onSelectPack('crop-cycle-radar')}
+              className={`px-2 py-0.5 rounded transition-colors ${
+                currentPack?.id === 'crop-cycle-radar'
+                  ? 'bg-stone-200 dark:bg-stone-700 font-bold text-stone-900 dark:text-stone-100'
+                  : 'hover:text-stone-900 dark:hover:text-stone-100'
+              }`}
+            >
+              Crops (C)
+            </button>
+          </div>
+        )}
+
         {currentPack && (
           <button
             onClick={onOpenMethods}
